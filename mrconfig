@@ -1,5 +1,11 @@
 [firmware]
 checkout = git clone 'git@github.com:mx-car/mx-car.git' 'firmware'
 
+[docker]
+checkout = git clone 'git@github.com:mx-car/docker.git' 'docker'
+
 [ros2/ws00/src/mxr]
 checkout = git clone 'git@github.com:mx-car/mxr-ros2.git' 'mxr'
+
+#[motor_shield]
+#checkout = git clone 'git@github.com:mx-car/layout_motor_shield.git' 'motor_shield'

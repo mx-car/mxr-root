@@ -1,7 +1,12 @@
 {
     "python.autoComplete.extraPaths": [
-        "/home/max/projects/ros2/install/gazebo_ros/lib/python3.8/site-packages",
-        "/home/max/projects/ros2/install/gazebo_msgs/lib/python3.8/site-packages",
+        "/home/max/projects/car/ros2/dev_ws/install/mxr_msgs/lib/python3.8/site-packages",
         "/opt/ros/galactic/lib/python3.8/site-packages"
-    ]
+    ],
+    "colcon.provideTasks": true,
+    "python.analysis.extraPaths": [
+        "/home/max/projects/car/ros2/dev_ws/install/mxr_msgs/lib/python3.8/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ],
+    "cmake.sourceDirectory": "${workspaceFolder}/src/mxr/mxr_base"
 }
