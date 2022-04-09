@@ -4,8 +4,8 @@
     "version": "2.0.0",
     "tasks": [
       {
-        "label": "build",
-            "detail": "Build workspace (default)",
+        "label": "colcon build",
+            "detail": "builds the workspace using colcon build",
             "type": "shell",
             "command": "source /opt/ros/galactic/setup.bash; colcon build --cmake-args '-DCMAKE_BUILD_TYPE=Debug'",
             "group": {
@@ -15,8 +15,8 @@
             "problemMatcher": "$gcc"
       },        
       {
-        "label": "build mxr_base",
-            "detail": "Build mxr_base",
+        "label": "make mxr_base",
+            "detail": "run make in build folder of mxr_base",
             "type": "shell",
             "command": "source ${workspaceFolder}/install/setup.bash; make",
             "options": {
