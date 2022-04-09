@@ -1,0 +1,5 @@
+[firmware]
+checkout = git clone 'git@github.com:mx-car/mx-car.git' 'firmware'
+
+[ros2/ws00/src/mxr]
+checkout = git clone 'git@github.com:mx-car/mxr-ros2.git' 'mxr'
