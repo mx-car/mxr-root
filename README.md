@@ -5,7 +5,12 @@ mxr project root folder
 mr -c mrconfig update
 ```
 ## firmware
-contains the project root for the teensy
+contains the project root for the teensy. In order to install the firmware project step into the project and use the myrepo configuration to clone all repositories neede.
+```
+cd firmware
+mr -c mrconfig update
+```
+
 
 ## ros2
 contains the ros2 workspaces
