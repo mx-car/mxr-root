@@ -1,8 +1,5 @@
 # mxr-root
 mxr project root 
-```
-make clone
-```
 ## Subprojects
 ### firmware
 contains the project root for the teensy. In order to install the firmware project step into the project and use the myrepo configuration to clone all repositories neede.
@@ -37,8 +34,10 @@ echo $MXR_ROOT_DIR           # check if the variable is correct
 echo $ROS2_CAR_DIR           # check if the variable is correct
 sudo mkdir -p $MXR_ROOT_DIR  # create folder
 sudo chown -R $USER:$USER $MXR_ROOT_DIR
-cd $MXR_ROOT_DIR
+cd /opt
 git clone git@github.com:mx-car/mxr-root.git $MXR_ROOT_DIR
+cd $MXR_ROOT_DIR
+make clone
 ```
 ### ROS
 Follow the instruction in [install ros2-car](ros2-car/install.md)
