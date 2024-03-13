@@ -34,6 +34,7 @@ Source your .bashrc and create the PROJECTS_DIR, set the file permissions and cl
 ```
 source ~/.bashrc
 echo $MXR_ROOT_DIR           # check if the variable is correct
+echo $ROS2_CAR_DIR           # check if the variable is correct
 sudo mkdir -p $MXR_ROOT_DIR  # create folder
 sudo chown -R $USER:$USER $MXR_ROOT_DIR
 cd $MXR_ROOT_DIR

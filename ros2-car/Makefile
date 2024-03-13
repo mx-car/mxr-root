@@ -51,6 +51,7 @@ build-ws00:
 build-ws01: 
 	cd ${PROJECT_DIR}/ws01; \
 	source ../env.sh; \
+	colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select Stage --cmake-args -DOpenGL_GL_PREFERENCE=LEGACY; \
 	colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 build-ws02: 
