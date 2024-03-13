@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/ws00/include/**",
+                "${workspaceFolder}/ws01/include/**",
+                "${workspaceFolder}/ws02/include/**",
+                "/usr/include/**",
+                "/opt/ros/humble/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu11",
+            "cppStandard": "c++14",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

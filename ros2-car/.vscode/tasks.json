@@ -1,0 +1,84 @@
+{
+  // Pressing Ctrl+Shift+B or running Run Build Task from the global Terminal menu show the following picker:
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "pkgs",
+      "description": "Which ros pkg do like?",
+      "options": [
+        "tuw_msgs",
+      ],
+      "default": "tuw_msgs"
+    },
+    {
+      "type": "pickString",
+      "id": "workspace",
+      "description": "Workspace?",
+      "options": [
+        "ws00",
+        "ws01",
+        "ws02"
+      ],
+      "default": "ws02"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "launche example.launch.py",
+      "type": "shell",
+      "command": "source ${workspaceFolder}/env.sh; ros2 launch stage_ros2 example.launch.py",
+    },
+    {
+      "label": "colcon",
+      "detail": "builds a workspace using colcon",
+      "type": "shell",
+      "command": "source ../env.sh; colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Debug",
+      "options": {
+        "cwd": "${workspaceFolder}/${input:workspace}/"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "colcon pkgs",
+      "detail": "builds tuw_geometry using colcon",
+      "type": "shell",
+      "command": "source ../env.sh; colcon build --packages-select ${input:pkgs} --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Debug",
+      "options": {
+        "cwd": "${workspaceFolder}/${input:workspace}/"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "never"
+      },
+      "runOptions": { 
+        "reevaluateOnRerun": false
+      }
+    },
+    {
+      "label": "colcon up-to",
+      "detail": "builds tuw_geometry using colcon",
+      "type": "shell",
+      "command": "source ../env.sh; colcon build --packages-up-to ${input:pkgs} --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Debug",
+      "options": {
+        "cwd": "${workspaceFolder}/${input:workspace}/"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "never"
+      },
+      "runOptions": { 
+        "reevaluateOnRerun": false
+      }
+    }
+  ]
+}
