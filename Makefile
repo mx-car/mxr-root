@@ -9,7 +9,7 @@ help:
 	@echo ""
 
 pull:
-	git pull orgin
+	git pull origin
 	git --work-tree=./firmware pull origin
 	git --work-tree=./motor_shield pull origin
 	git --work-tree=./docker pull origin
